@@ -1,0 +1,7 @@
+[package]
+name = "tinybrowser"
+version = "0.1.0"
+edition = "2021"
+description = "Rust で作る小さなブラウザ(学習用)。URL → HTTP → HTML → DOM → CSS → レイアウト → 描画 → JavaScript"
+
+[dependencies]

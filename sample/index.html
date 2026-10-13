@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>tinybrowser sample</title>
+  <style>
+    body { background-color: white; color: black }
+    h1 { color: navy }
+    .note { background-color: lightyellow }
+    #count { color: red }
+    p.hidden-rule { color: green } /* 複合セレクタは未対応なので当たらない */
+    .gone { display: none }
+  </style>
+</head>
+<body>
+  <h1>Hello, tinybrowser</h1>
+  <p>This page is rendered by a browser written in Rust. It has <a href="/next.html">a link</a> and a very long sentence that should wrap around when it reaches the right edge of the viewport.</p>
+  <p class="note">Clicks: <span id="count">0</span></p>
+  <p class="gone">You should not see this.</p>
+  <script>
+    var n = 1 + 2;
+    var el = document.getElementById("count");
+    el.textContent = "" + n;
+    console.log("count is", el.textContent);
+  </script>
+</body>
+</html>
